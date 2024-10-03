@@ -13,30 +13,30 @@ public class SeasonExample {
         String month;
 
         try {
-            month = br.readLine();
+           month = br.readLine();
         } catch (IOException e) {
             throw new RuntimeException("Error reading input", e);
         }
 
-        switch (month) {
-            case "December":
-            case "January":
-            case "February":
+        switch (month.toLowerCase()) {
+            case "december":
+            case "january":
+            case "february":
                 System.out.println("Winter season");
                 return Season.WINTER;
-            case "March":
-            case "April":
-            case "May":
+            case "march":
+            case "april":
+            case "may":
                 System.out.println("Spring season");
                 return Season.SPRING;
-            case "June":
-            case "July":
-            case "August":
+            case "june":
+            case "july":
+            case "august":
                 System.out.println("Summer season");
                 return Season.SUMMER;
-            case "September":
-            case "October":
-            case "November":
+            case "september":
+            case "october":
+            case "november":
                 System.out.println("Autumn season");
                 return Season.AUTUMN;
             default:
